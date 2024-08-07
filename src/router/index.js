@@ -1,10 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '../components/Login.vue'
 import MainPage from '../components/MainPage.vue'
 import HomeComponent from '../components/HomeComponent.vue';
-import ElectricityComponent from '../components/ElectricityComponent.vue';
 import ReportComponent from '../components/ReportComponent.vue';
-
+import ReportPdfComponent from '../components/ReportPdfComponent.vue';
 
 const routes = [
   {
@@ -12,8 +10,8 @@ const routes = [
     component: MainPage,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'electricity', component: ElectricityComponent },
-      { path: 'report', component: ReportComponent }
+      { path: 'report', component: ReportComponent },
+      {path:'pdf',component: ReportPdfComponent}
     ]
   }
 ];

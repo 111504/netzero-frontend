@@ -2,8 +2,8 @@
   <aside class="sidebar">
     <ul>
        <li><router-link to="/">盤查資訊</router-link></li>
-      <li><router-link to="/electricity">用電量</router-link></li>
       <li><router-link to="/report">產生報表</router-link></li>
+       <li><router-link to="/pdf">產生pdf</router-link></li>
     </ul>
   </aside>
 </template>

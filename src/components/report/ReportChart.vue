@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chart-container">
     <Line :data="chartData" :options="chartOptions" />
   </div>
 </template>
@@ -15,9 +15,18 @@ const chartData = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
   datasets: [
     {
-      label: 'Dataset 1',
+      label: '用電比較',
       backgroundColor: '#f87979',
-      data: [40, 20, 12, 39, 10, 40, 39]
+      borderColor: '#f87979',
+      data: [40, 20, 12, 39, 10, 40, 39],
+      fill: false
+    },
+    {
+      label: '用電比較2',
+      backgroundColor: '#36a2eb',
+      borderColor: '#36a2eb',
+      data2: [40, 20, 12, 39, 10, 40, 39],
+      fill: false
     }
   ]
 }

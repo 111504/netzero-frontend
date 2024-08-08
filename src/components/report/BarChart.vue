@@ -46,7 +46,7 @@ function getRandomInt() {
   return Math.floor(Math.random() * (50 - 5 + 1)) + 5;
 }
 const switchData = () => {
-  console.log('123')
+  console.log('獲取數據')
   // chartData1.value = chartData1.value.map(() => Math.floor(Math.random() * 1000));
   fetchData();
 };
@@ -65,17 +65,34 @@ onMounted(() => {
 });
 
 
+
 // 從 API 獲取數據的函數
+//真實情況 後端會回傳 message code data 
+//code 網路狀態碼
+//message
 const fetchData = async () => {
   try {
-    const response = await axios.get('/test/info');
-    // chartData1.value = response.data; // 假設 API 返回一個數組
-    
+    const response = await axios.get('https://run.mocky.io/v3/3e65090a-729c-46b0-aec9-7cab2879e465',{
+      timeout:5000//逾時時間為5秒
+    });
+     if(response.data.code===200){
+      chartData1.value = response.data.data; // 假設 API 返回一個數組
+      console.log('回應=',chartData1.value)
+     }
+     else{
+      // 處理後端返回的業務錯誤
+      console.error('API Error',response.data.message)
+     }
   } catch (error) {
-    
-    console.error('Failed to fetch data:', error);
+    //技術錯誤
+     if (error.code === 'ECONNABORTED') {
+      console.error('Request timed out');
+    } else {
+      console.error('Failed to fetch data:', error.message);
+    }
   }
 };
+
 
 
 

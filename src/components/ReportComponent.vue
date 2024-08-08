@@ -2,8 +2,8 @@
   <div class="content">
     <!-- <ReportChart />
     <PieChart /> -->
-    <!-- <BarChart /> -->
-    <UpdateChart/>
+    <BarChart />
+    <!-- <UpdateChart/> -->
   </div>
 </template>
 

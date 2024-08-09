@@ -1,9 +1,9 @@
 <template>
   <div class="content">
-    <!-- <ReportChart />
-    <PieChart /> -->
-    <BarChart />
-    <!-- <UpdateChart/> -->
+    <!-- <ReportChart /> -->
+    <PieChart />
+    <!-- <BarChart />
+    <UpdateChart/> -->
   </div>
 </template>
 
@@ -19,8 +19,9 @@ import UpdateChart from './report/UpdateChart.vue'
 .content {
   margin-left: 200px; /* Sidebar width */
   padding: 1rem;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
+  background-color: #2bde4c;
+  width: 100vw;
+  height: 500px;
 }
 
 </style>

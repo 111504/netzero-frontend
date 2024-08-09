@@ -1,6 +1,7 @@
 <template>
   <div class="chart-container">
     <Line :data="chartData" :options="chartOptions" />
+    
   </div>
 </template>
 
@@ -25,7 +26,7 @@ const chartData = {
       label: '用電比較2',
       backgroundColor: '#36a2eb',
       borderColor: '#36a2eb',
-      data2: [40, 20, 12, 39, 10, 40, 39],
+      data: [30, 25, 19, 25, 20, 35, 30],
       fill: false
     }
   ]

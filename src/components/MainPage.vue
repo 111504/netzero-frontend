@@ -2,8 +2,11 @@
   <div class="main-page">
     <HeaderComponent />
     <div class="main-content">
-      <SidebarComponent />
+     
+      <SidebarComponent /> 
+      <div class="main-info">
        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -12,7 +15,7 @@
 import HeaderComponent from './HeaderComponent.vue';
 import SidebarComponent from './SidebarComponent.vue';
 </script>
-<style scoped>
+<style >
 .main-page {
   display: flex;
   flex-direction: column;
@@ -22,5 +25,10 @@ import SidebarComponent from './SidebarComponent.vue';
 .main-content {
   display: flex;
   flex: 1;
+}
+
+.main-info{
+  margin-left:200px ;
+  background-color: aqua;
 }
 </style>
